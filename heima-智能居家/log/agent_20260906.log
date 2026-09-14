@@ -1,0 +1,42 @@
+2026-09-06 16:18:02,703 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有1条消息。
+2026-09-06 16:18:02,703 - agent - DEBUG - react_agent.py:57 - [log_before_model]dict | 给我生成我的使用报告
+2026-09-06 16:18:04,614 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：get_user_id
+2026-09-06 16:18:04,615 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{}
+2026-09-06 16:18:04,616 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有3条消息。
+2026-09-06 16:18:04,617 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 1005
+2026-09-06 16:18:05,725 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：get_current_month
+2026-09-06 16:18:05,729 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{}
+2026-09-06 16:18:05,731 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有5条消息。
+2026-09-06 16:18:05,731 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 2025-04
+2026-09-06 16:18:06,983 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：fill_context_for_report
+2026-09-06 16:18:06,985 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{}
+2026-09-06 16:18:06,985 - agent - INFO - react_agent.py:48 - [tool monitor]fill_context_for_report调用成功，开启报告模式
+2026-09-06 16:18:06,986 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有7条消息。
+2026-09-06 16:18:06,986 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-09-06 16:18:10,715 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有1条消息。
+2026-09-06 16:18:10,715 - agent - DEBUG - react_agent.py:57 - [log_before_model]dict | 给我生成我的使用报告
+2026-09-06 16:18:13,569 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：get_user_id
+2026-09-06 16:18:13,569 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{}
+2026-09-06 16:18:13,571 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有3条消息。
+2026-09-06 16:18:13,571 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 1006
+2026-09-06 16:18:14,647 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：get_current_month
+2026-09-06 16:18:14,647 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{}
+2026-09-06 16:18:14,649 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有5条消息。
+2026-09-06 16:18:14,649 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 2025-11
+2026-09-06 16:18:16,151 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：fill_context_for_report
+2026-09-06 16:18:16,151 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{}
+2026-09-06 16:18:16,153 - agent - INFO - react_agent.py:48 - [tool monitor]fill_context_for_report调用成功，开启报告模式
+2026-09-06 16:18:16,153 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有7条消息。
+2026-09-06 16:18:16,153 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-09-06 16:18:18,173 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：fetch_external_data
+2026-09-06 16:18:18,174 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{'user_id': '1006', 'month': '2025-11'}
+2026-09-06 16:18:18,187 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有9条消息。
+2026-09-06 16:18:18,188 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | {"特征": "150㎡别墅 | 儿童 | 多层", "效率": "跨楼层失败:0次/周\\n玩具避障率:88%", "耗材": "边刷寿命:剩余50天\\n集尘袋消耗:0.8个/月", "对比": "清洁效率优于85%大户型多层用户"}
+2026-09-06 16:18:19,824 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：rag_summarize
+2026-09-06 16:18:19,824 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{'query': '多层别墅扫地机器人使用建议和保养'}
+2026-09-06 16:18:24,135 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有11条消息。
+2026-09-06 16:18:24,135 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 多层别墅使用扫地机器人时，建议选择带有多楼层地图记忆功能的机型，确保每层地图可独立保存；使用前清理地面障碍物，定期清理滚刷、边刷和滤网；避免在潮湿地面运行；充电座宜固定于一层便于机器人返回充电；长期不用时应关闭电源并存放于干燥处。
+2026-09-06 16:18:25,339 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：rag_summarize
+2026-09-06 16:18:25,339 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{'query': '有儿童家庭扫地机器人使用注意事项'}
+2026-09-06 16:18:28,315 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有13条消息。
+2026-09-06 16:18:28,316 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 有儿童的家庭使用扫地机器人时，应确保设备具备防跌落和防碰撞功能，避免儿童接触充电座以防触电，使用过程中需有成人看护，防止儿童将手脚或玩具伸入机器人底部，同时定期清理尘盒和滚刷以维持正常运行并减少安全隐患。

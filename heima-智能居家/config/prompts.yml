@@ -1,0 +1,5 @@
+
+main_prompt_path: prompts/main_prompt.txt   #主系统提示词（Agent角色设定）
+rag_summarize_prompt_path: prompts/rag_summarize.txt  #RAG检索检索后摘要/合并提示词
+report_prompt_path: prompts/report_prompt.txt   #生成报告专用提示词
+#单独放在txt的优势：后续调整话术、修改报告格式，只编辑 txt 文本，不用修改 py 文件

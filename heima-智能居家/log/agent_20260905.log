@@ -1,0 +1,265 @@
+2026-09-05 10:58:41,766 - agent - INFO - logger_hander.py:54 - 信息日志
+2026-09-05 10:58:41,767 - agent - ERROR - logger_hander.py:55 - 错误日志
+2026-09-05 10:58:41,767 - agent - WARNING - logger_hander.py:56 - 警告日志
+2026-09-05 10:58:41,767 - agent - DEBUG - logger_hander.py:57 - 调试日志
+2026-09-05 15:38:14,153 - agent - INFO - logger_handler.py:54 - 信息日志
+2026-09-05 15:38:14,155 - agent - ERROR - logger_handler.py:55 - 错误日志
+2026-09-05 15:38:14,155 - agent - WARNING - logger_handler.py:56 - 警告日志
+2026-09-05 15:38:14,155 - agent - DEBUG - logger_handler.py:57 - 调试日志
+2026-09-05 15:41:23,112 - agent - INFO - logger_handler.py:54 - 信息日志
+2026-09-05 15:41:23,112 - agent - ERROR - logger_handler.py:55 - 错误日志
+2026-09-05 15:41:23,137 - agent - WARNING - logger_handler.py:56 - 警告日志
+2026-09-05 15:41:23,137 - agent - DEBUG - logger_handler.py:57 - 调试日志
+2026-09-05 15:41:27,722 - agent - INFO - logger_handler.py:54 - 信息日志
+2026-09-05 15:41:27,722 - agent - ERROR - logger_handler.py:55 - 错误日志
+2026-09-05 15:41:27,722 - agent - WARNING - logger_handler.py:56 - 警告日志
+2026-09-05 15:41:27,722 - agent - DEBUG - logger_handler.py:57 - 调试日志
+2026-09-05 18:01:34,019 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 84, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "D:\agent-test\heima\rag\vector_store.py", line 65, in get_file_documents
+    return pdf_loader(read_path)
+  File "D:\agent-test\heima\utils\file_handler.py", line 56, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()   #.load 执行读取解析
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-09-05 18:01:35,723 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问2.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:01:37,744 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\扫拖一体机器人100问.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:01:42,012 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\故障排除.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:01:44,943 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\维护保养.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:01:47,341 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\选购指南.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:01:49,413 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 84, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "D:\agent-test\heima\rag\vector_store.py", line 65, in get_file_documents
+    return pdf_loader(read_path)
+  File "D:\agent-test\heima\utils\file_handler.py", line 56, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()   #.load 执行读取解析
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-09-05 18:01:52,275 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问2.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:01:57,186 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\扫拖一体机器人100问.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:02:06,026 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\故障排除.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:02:10,849 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\维护保养.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:02:14,169 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\选购指南.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:02:20,060 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 84, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "D:\agent-test\heima\rag\vector_store.py", line 65, in get_file_documents
+    return pdf_loader(read_path)
+  File "D:\agent-test\heima\utils\file_handler.py", line 56, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()   #.load 执行读取解析
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\miniconda3\envs\heima_env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-09-05 18:02:21,649 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问2.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:02:23,335 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\扫拖一体机器人100问.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:02:27,016 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\故障排除.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:02:29,188 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\维护保养.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:02:30,873 - agent - ERROR - vector_store.py:105 - [加载知识库]D:\agent-test\heima\data\选购指南.txt加载失败：unsupported operand type(s) for +: 'function' and 'str'
+Traceback (most recent call last):
+  File "D:\agent-test\heima\rag\vector_store.py", line 100, in load_document
+    save_md5_hex(md5_hex)
+  File "D:\agent-test\heima\rag\vector_store.py", line 58, in save_md5_hex
+    f.write(md5_for_check + "\n")
+TypeError: unsupported operand type(s) for +: 'function' and 'str'
+2026-09-05 18:05:22,956 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\扫地机器人100问.pdf 的md5结果：<function md5_hex at 0x000001FC84570CA0>，类型：<class 'function'>
+2026-09-05 18:05:22,957 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问.pdf MD5计算失败，跳过
+2026-09-05 18:05:22,957 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\扫地机器人100问2.txt 的md5结果：<function md5_hex at 0x000001FC84570CA0>，类型：<class 'function'>
+2026-09-05 18:05:22,957 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问2.txt MD5计算失败，跳过
+2026-09-05 18:05:22,958 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\扫拖一体机器人100问.txt 的md5结果：<function md5_hex at 0x000001FC84570CA0>，类型：<class 'function'>
+2026-09-05 18:05:22,958 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\扫拖一体机器人100问.txt MD5计算失败，跳过
+2026-09-05 18:05:22,959 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\故障排除.txt 的md5结果：<function md5_hex at 0x000001FC84570CA0>，类型：<class 'function'>
+2026-09-05 18:05:22,959 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\故障排除.txt MD5计算失败，跳过
+2026-09-05 18:05:22,959 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\维护保养.txt 的md5结果：<function md5_hex at 0x000001FC84570CA0>，类型：<class 'function'>
+2026-09-05 18:05:22,959 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\维护保养.txt MD5计算失败，跳过
+2026-09-05 18:05:22,959 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\选购指南.txt 的md5结果：<function md5_hex at 0x000001FC84570CA0>，类型：<class 'function'>
+2026-09-05 18:05:22,959 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\选购指南.txt MD5计算失败，跳过
+2026-09-05 18:06:03,759 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\扫地机器人100问.pdf 的md5结果：<function md5_hex at 0x000001FC755D0CA0>，类型：<class 'function'>
+2026-09-05 18:06:03,759 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问.pdf MD5计算失败，跳过
+2026-09-05 18:06:03,759 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\扫地机器人100问2.txt 的md5结果：<function md5_hex at 0x000001FC755D0CA0>，类型：<class 'function'>
+2026-09-05 18:06:03,760 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问2.txt MD5计算失败，跳过
+2026-09-05 18:06:03,760 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\扫拖一体机器人100问.txt 的md5结果：<function md5_hex at 0x000001FC755D0CA0>，类型：<class 'function'>
+2026-09-05 18:06:03,760 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\扫拖一体机器人100问.txt MD5计算失败，跳过
+2026-09-05 18:06:03,760 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\故障排除.txt 的md5结果：<function md5_hex at 0x000001FC755D0CA0>，类型：<class 'function'>
+2026-09-05 18:06:03,760 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\故障排除.txt MD5计算失败，跳过
+2026-09-05 18:06:03,760 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\维护保养.txt 的md5结果：<function md5_hex at 0x000001FC755D0CA0>，类型：<class 'function'>
+2026-09-05 18:06:03,760 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\维护保养.txt MD5计算失败，跳过
+2026-09-05 18:06:03,760 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\选购指南.txt 的md5结果：<function md5_hex at 0x000001FC755D0CA0>，类型：<class 'function'>
+2026-09-05 18:06:03,760 - agent - ERROR - vector_store.py:86 - [加载知识库]D:\agent-test\heima\data\选购指南.txt MD5计算失败，跳过
+2026-09-05 18:08:25,616 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\扫地机器人100问.pdf 的md5结果：6d726f4604d9e7ebcf59a932ae9e9c00，类型：<class 'str'>
+2026-09-05 18:08:27,917 - agent - INFO - vector_store.py:112 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问.pdf 内容加载成功
+2026-09-05 18:08:27,917 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\扫地机器人100问2.txt 的md5结果：a29a4ba5a539a2a462def8f91eb98ccc，类型：<class 'str'>
+2026-09-05 18:08:31,977 - agent - INFO - vector_store.py:112 - [加载知识库]D:\agent-test\heima\data\扫地机器人100问2.txt 内容加载成功
+2026-09-05 18:08:31,977 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\扫拖一体机器人100问.txt 的md5结果：d294281a5769e0a3d1455fbf637ee572，类型：<class 'str'>
+2026-09-05 18:08:35,398 - agent - INFO - vector_store.py:112 - [加载知识库]D:\agent-test\heima\data\扫拖一体机器人100问.txt 内容加载成功
+2026-09-05 18:08:35,399 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\故障排除.txt 的md5结果：928c24dbdeeb1c0a109f5620c8bac429，类型：<class 'str'>
+2026-09-05 18:08:40,900 - agent - INFO - vector_store.py:112 - [加载知识库]D:\agent-test\heima\data\故障排除.txt 内容加载成功
+2026-09-05 18:08:40,901 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\维护保养.txt 的md5结果：fc539588792a89ff842cf241cf822de1，类型：<class 'str'>
+2026-09-05 18:08:44,260 - agent - INFO - vector_store.py:112 - [加载知识库]D:\agent-test\heima\data\维护保养.txt 内容加载成功
+2026-09-05 18:08:44,261 - agent - DEBUG - vector_store.py:82 - 文件 D:\agent-test\heima\data\选购指南.txt 的md5结果：94bd6c0b4283b8524f4e8dfc5b72f8ab，类型：<class 'str'>
+2026-09-05 18:08:47,781 - agent - INFO - vector_store.py:112 - [加载知识库]D:\agent-test\heima\data\选购指南.txt 内容加载成功
+2026-09-05 22:10:29,372 - agent - INFO - react_agent.py:45 - [log_before_model]即将调用模型，带有1条消息。
+2026-09-05 22:13:03,657 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有1条消息。
+2026-09-05 22:13:03,657 - agent - DEBUG - react_agent.py:57 - [log_before_model]dict | 给我生成我的使用报告
+2026-09-05 22:13:07,403 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：get_user_id
+2026-09-05 22:13:07,406 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{}
+2026-09-05 22:13:07,407 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有3条消息。
+2026-09-05 22:13:07,407 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 1005
+2026-09-05 22:13:08,471 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：get_current_month
+2026-09-05 22:13:08,471 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{}
+2026-09-05 22:13:08,473 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有5条消息。
+2026-09-05 22:13:08,473 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 2025-04
+2026-09-05 22:13:09,775 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：fill_context_for_report
+2026-09-05 22:13:09,776 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{}
+2026-09-05 22:13:09,776 - agent - INFO - react_agent.py:48 - [tool monitor]fill_context_for_report调用成功，开启报告模式
+2026-09-05 22:13:09,777 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有7条消息。
+2026-09-05 22:13:09,777 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-09-05 22:13:11,412 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：fetch_external_data
+2026-09-05 22:13:11,412 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{'user_id': '1005', 'month': '2025-04'}
+2026-09-05 22:13:11,427 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有9条消息。
+2026-09-05 22:13:11,427 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | {"特征": "120㎡ | 老人 | 防滑砖", "效率": "手动操作占比:85%\\n定时清扫使用率:5次/周", "耗材": "电池衰减:28%\\n水箱使用率:50%", "对比": "语音控制功能已安装+操作熟练度提升"}
+2026-09-05 22:13:12,918 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：rag_summarize
+2026-09-05 22:13:12,922 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{'query': '扫地机器人电池保养建议'}
+2026-09-05 22:13:14,802 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有11条消息。
+2026-09-05 22:13:14,803 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 扫地机器人电池保养建议包括：避免长时间满电或完全放电存放，定期使用以保持电池活性，存放时电量维持在40%-60%，避免高温或潮湿环境，长期不用时每月充电一次。
+2026-09-05 22:13:16,300 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：rag_summarize
+2026-09-05 22:13:16,300 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{'query': '防滑砖地面扫地机器人使用建议'}
+2026-09-05 22:13:18,973 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有13条消息。
+2026-09-05 22:13:18,974 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 防滑砖地面使用扫地机器人时，建议选择配备大功率电机和高扭矩边刷的机型，以增强对粗糙表面的清洁能力；同时确保机器人底部传感器不易被防滑砖纹理干扰，避免误判跌落；定期清理滚刷和边刷，防止细小颗粒卡滞影响运行。
+2026-09-05 22:13:20,126 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：rag_summarize
+2026-09-05 22:13:20,126 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{'query': '老年人使用扫地机器人操作建议'}
+2026-09-05 22:13:23,016 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有15条消息。
+2026-09-05 22:13:23,016 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 选择操作界面简洁、按键少、字体大的扫地机器人；优先考虑具备一键启动、自动回充功能的型号；避免需要频繁设置或连接手机App的复杂机型；建议在初次使用时由家人协助熟悉基本操作。
+2026-09-05 22:41:59,179 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有1条消息。
+2026-09-05 22:41:59,180 - agent - DEBUG - react_agent.py:57 - [log_before_model]dict | 你好
+2026-09-05 22:42:23,711 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有3条消息。
+2026-09-05 22:42:23,712 - agent - DEBUG - react_agent.py:57 - [log_before_model]dict | 介绍一下你的功能
+2026-09-05 22:43:56,835 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有5条消息。
+2026-09-05 22:43:56,835 - agent - DEBUG - react_agent.py:57 - [log_before_model]dict | 扫地的分类
+2026-09-05 22:43:58,159 - agent - INFO - react_agent.py:42 - [tool monitor]执行工具：rag_summarize
+2026-09-05 22:43:58,160 - agent - INFO - react_agent.py:43 - [tool monitor]传入参数：{'query': '扫地机器人的分类方式和类型'}
+2026-09-05 22:44:01,377 - agent - INFO - react_agent.py:54 - [log_before_model]即将调用模型，带有7条消息。
+2026-09-05 22:44:01,377 - agent - DEBUG - react_agent.py:57 - [log_before_model]ToolMessage | 扫地机器人按导航方式可分为随机碰撞式和规划式；按集尘方式可分为普通集尘盒式和自动集尘式；按功能可分为扫地型、扫拖一体型和洗地机器人。
